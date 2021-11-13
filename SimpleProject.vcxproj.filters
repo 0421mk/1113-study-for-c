@@ -18,11 +18,5 @@
     <ClCompile Include="Hello.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Example_1_1.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Example_1_2.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
