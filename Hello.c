@@ -1,32 +1,22 @@
 #include <stdio.h>
 
-int checkChar(char ch) {
-
-	if (ch >= 65 && ch <= 90) {
-		ch += 32;
-	}
-	else if (ch >= 97 && ch <= 122) {
-		ch -= 32;
-	}
-	else {
-		return -1;
-	}
-
-	return ch;
+void ClearLineFromReadBuffer(void) {
+	while (getchar() != '\n');
 }
 
 int main(void) {
 
-	int ch;
-	ch = getchar();
-	ch = checkChar(ch);
+	char perId[7];
+	char name[10];
 
-	if (ch == -1) {
-		printf("잘못 입력하셨습니다.");
-		return -1;
-	}
-	
-	putchar(ch);
+	fputs("주민번호 앞 6자리 입력: ", stdout);
+	fgets(perId, sizeof(perId), stdin);
+
+	fputs("이름 입력: ", stdout);
+	fgets(name, sizeof(name), stdin);
+
+	printf("주민번호: %s\n", perId);
+	printf("이름: %s", name);
 
 	return 0;
 
